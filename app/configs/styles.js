@@ -1,4 +1,3 @@
-import React from 'react';
 import colors from 'configs/colors';
 import dimens from 'configs/dimens';
 
