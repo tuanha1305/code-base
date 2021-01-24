@@ -1,4 +1,7 @@
 {
   "button_ok": "Đồng ý",
-  "button_cancel": "Hủy"
+  "button_cancel": "Hủy",
+
+  "title_alert_crash": "Thông báo",
+  "message_alert_crash": "Tác vụ chưa được thực hiện. Vui lòng thử lại!"
 }
