@@ -6,7 +6,7 @@ import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {helpers} from 'configs/themes';
 import {strings} from 'controls/i18n';
 import {setJSExceptionHandler, setNativeExceptionHandler} from 'react-native-exception-handler';
-//import SplashScreen from 'react-native-splash-screen';
+import SplashScreen from 'react-native-splash-screen';
 import I18n from 'react-native-i18n';
 import moment from 'moment';
 
@@ -35,7 +35,7 @@ const App: () => React$Node = () => {
     moment.locale('vi');
 
     useEffect(() => {
-        //SplashScreen.hide();
+        SplashScreen.hide();
     }, []);
 
     return (

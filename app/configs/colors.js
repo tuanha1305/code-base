@@ -1,9 +1,10 @@
 export default {
     statusBarColor: '#FFFFFF',
 
-    primaryColor: '#6200EE',
-    secondaryColor: '#3700B3',
-    tertiaryColor: '#BB86FC',
+    primaryColor: '#673AB7',
+    primaryDarkColor: '#512DA8',
+    accentColor: '#7C4DFF',
+    secondaryColor: '#EF0078',
 
     backgroundColor: '#DEDEDE',
     contentColor: '#F2F2F2',

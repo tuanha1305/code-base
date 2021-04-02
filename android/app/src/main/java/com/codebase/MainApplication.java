@@ -3,6 +3,9 @@ package com.codebase;
 import android.app.Application;
 import android.content.Context;
 
+import androidx.multidex.MultiDex;
+
+import com.codebase.modules.CBNativePackage;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
@@ -28,6 +31,7 @@ public class MainApplication extends Application implements ReactApplication {
                     List<ReactPackage> packages = new PackageList(this).getPackages();
                     // Packages that cannot be autolinked yet can be added manually here, for example:
                     // packages.add(new MyReactNativePackage());
+                    packages.add(new CBNativePackage());
                     return packages;
                 }
 
@@ -36,6 +40,12 @@ public class MainApplication extends Application implements ReactApplication {
                     return "index";
                 }
             };
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
 
     @Override
     public ReactNativeHost getReactNativeHost() {
