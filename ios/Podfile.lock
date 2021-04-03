@@ -249,6 +249,8 @@ PODS:
   - react-native-simple-toast (1.1.3):
     - React-Core
     - Toast (~> 4.0.0)
+  - react-native-splash-screen (3.2.0):
+    - React
   - react-native-webview (11.3.2):
     - React-Core
   - React-RCTActionSheet (0.63.4):
@@ -356,6 +358,7 @@ PODS:
     - React-Core
   - RNVectorIcons (8.1.0):
     - React-Core
+  - SVProgressHUD (2.2.5)
   - Toast (4.0.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -404,6 +407,7 @@ DEPENDENCIES:
   - react-native-restart (from `../node_modules/react-native-restart`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-simple-toast (from `../node_modules/react-native-simple-toast`)
+  - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
   - react-native-webview (from `../node_modules/react-native-webview`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -424,6 +428,7 @@ DEPENDENCIES:
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
+  - SVProgressHUD
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -439,6 +444,7 @@ SPEC REPOS:
     - Flipper-RSocket
     - FlipperKit
     - OpenSSL-Universal
+    - SVProgressHUD
     - Toast
     - YogaKit
 
@@ -485,6 +491,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-simple-toast:
     :path: "../node_modules/react-native-simple-toast"
+  react-native-splash-screen:
+    :path: "../node_modules/react-native-splash-screen"
   react-native-webview:
     :path: "../node_modules/react-native-webview"
   React-RCTActionSheet:
@@ -561,6 +569,7 @@ SPEC CHECKSUMS:
   react-native-restart: 733a51ad137f15b0f8dc34c4082e55af7da00979
   react-native-safe-area-context: f0906bf8bc9835ac9a9d3f97e8bde2a997d8da79
   react-native-simple-toast: bf002828cf816775a6809f7a9ec3907509bce11f
+  react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-webview: 71567b6bf3d4e55914e580d720cc8f7df64af817
   React-RCTActionSheet: 89a0ca9f4a06c1f93c26067af074ccdce0f40336
   React-RCTAnimation: 1bde3ecc0c104c55df246eda516e0deb03c4e49b
@@ -581,10 +590,11 @@ SPEC CHECKSUMS:
   RNReanimated: 70f662b5232dd5d19ccff581e919a54ea73df51c
   RNScreens: e8e8dd0588b5da0ab57dcca76ab9b2d8987757e0
   RNVectorIcons: 31cebfcf94e8cf8686eb5303ae0357da64d7a5a4
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 23313021b0a835fcfd73d958aaa03f38aba42906
+PODFILE CHECKSUM: 0a861d099e9f4072b2d7c8514d47abee0931bd82
 
 COCOAPODS: 1.9.3

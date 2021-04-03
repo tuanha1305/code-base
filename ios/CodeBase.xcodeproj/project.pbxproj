@@ -15,6 +15,9 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* CodeBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CodeBaseTests.m */; };
+		78D6CC3C261829F2004130DE /* CBNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D6CC2F261829F2004130DE /* CBNative.m */; };
+		78D6CC3F261829F2004130DE /* DeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D6CC37261829F2004130DE /* DeviceUtil.m */; };
+		78D6CC40261829F2004130DE /* NSUserDefaults+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D6CC3A261829F2004130DE /* NSUserDefaults+Helper.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C880D77818C761FEFA364252 /* libPods-CodeBase-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5F26C16D144057D9BBBE08 /* libPods-CodeBase-tvOSTests.a */; };
 		CBAE12D535CBABC047BA2B0A /* libPods-CodeBase-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9DE515720B3D8F40E68AB4 /* libPods-CodeBase-tvOS.a */; };
@@ -57,6 +60,12 @@
 		5ED80A197720E5A0FA847915 /* Pods-CodeBase-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBase-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-CodeBase-tvOS/Pods-CodeBase-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		661DB954760131F6CA8D54C2 /* libPods-CodeBase-CodeBaseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeBase-CodeBaseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		738BA7E815FBF3E382A8F574 /* Pods-CodeBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBase.debug.xcconfig"; path = "Target Support Files/Pods-CodeBase/Pods-CodeBase.debug.xcconfig"; sourceTree = "<group>"; };
+		78D6CC2F261829F2004130DE /* CBNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBNative.m; sourceTree = "<group>"; };
+		78D6CC33261829F2004130DE /* CBNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBNative.h; sourceTree = "<group>"; };
+		78D6CC36261829F2004130DE /* DeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtil.h; sourceTree = "<group>"; };
+		78D6CC37261829F2004130DE /* DeviceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtil.m; sourceTree = "<group>"; };
+		78D6CC39261829F2004130DE /* NSUserDefaults+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Helper.h"; sourceTree = "<group>"; };
+		78D6CC3A261829F2004130DE /* NSUserDefaults+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Helper.m"; sourceTree = "<group>"; };
 		7D5399B8E40216117ED8ACF0 /* Pods-CodeBase-CodeBaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBase-CodeBaseTests.debug.xcconfig"; path = "Target Support Files/Pods-CodeBase-CodeBaseTests/Pods-CodeBase-CodeBaseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CodeBase/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B5F26C16D144057D9BBBE08 /* libPods-CodeBase-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeBase-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +149,9 @@
 		13B07FAE1A68108700A75B9A /* CodeBase */ = {
 			isa = PBXGroup;
 			children = (
+				78D6CC38261829F2004130DE /* Helpers */,
+				78D6CC2C261829F2004130DE /* Modules */,
+				78D6CC35261829F2004130DE /* Utils */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -162,6 +174,33 @@
 				9B5F26C16D144057D9BBBE08 /* libPods-CodeBase-tvOSTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78D6CC2C261829F2004130DE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				78D6CC2F261829F2004130DE /* CBNative.m */,
+				78D6CC33261829F2004130DE /* CBNative.h */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		78D6CC35261829F2004130DE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				78D6CC36261829F2004130DE /* DeviceUtil.h */,
+				78D6CC37261829F2004130DE /* DeviceUtil.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		78D6CC38261829F2004130DE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				78D6CC39261829F2004130DE /* NSUserDefaults+Helper.h */,
+				78D6CC3A261829F2004130DE /* NSUserDefaults+Helper.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -458,6 +497,7 @@
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -478,6 +518,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -530,6 +571,7 @@
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -550,6 +592,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -632,7 +675,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				78D6CC3F261829F2004130DE /* DeviceUtil.m in Sources */,
+				78D6CC3C261829F2004130DE /* CBNative.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				78D6CC40261829F2004130DE /* NSUserDefaults+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
