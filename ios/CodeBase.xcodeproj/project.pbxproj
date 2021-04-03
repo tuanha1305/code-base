@@ -15,6 +15,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* CodeBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CodeBaseTests.m */; };
+		78A725462618D7BE00D61E1B /* CBLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A725452618D7BE00D61E1B /* CBLocation.m */; };
 		78D6CC3C261829F2004130DE /* CBNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D6CC2F261829F2004130DE /* CBNative.m */; };
 		78D6CC3F261829F2004130DE /* DeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D6CC37261829F2004130DE /* DeviceUtil.m */; };
 		78D6CC40261829F2004130DE /* NSUserDefaults+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D6CC3A261829F2004130DE /* NSUserDefaults+Helper.m */; };
@@ -60,6 +61,8 @@
 		5ED80A197720E5A0FA847915 /* Pods-CodeBase-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBase-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-CodeBase-tvOS/Pods-CodeBase-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		661DB954760131F6CA8D54C2 /* libPods-CodeBase-CodeBaseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeBase-CodeBaseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		738BA7E815FBF3E382A8F574 /* Pods-CodeBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBase.debug.xcconfig"; path = "Target Support Files/Pods-CodeBase/Pods-CodeBase.debug.xcconfig"; sourceTree = "<group>"; };
+		78A725442618D7BE00D61E1B /* CBLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLocation.h; sourceTree = "<group>"; };
+		78A725452618D7BE00D61E1B /* CBLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLocation.m; sourceTree = "<group>"; };
 		78D6CC2F261829F2004130DE /* CBNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBNative.m; sourceTree = "<group>"; };
 		78D6CC33261829F2004130DE /* CBNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBNative.h; sourceTree = "<group>"; };
 		78D6CC36261829F2004130DE /* DeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtil.h; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 		78D6CC2C261829F2004130DE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				78A725442618D7BE00D61E1B /* CBLocation.h */,
+				78A725452618D7BE00D61E1B /* CBLocation.m */,
 				78D6CC2F261829F2004130DE /* CBNative.m */,
 				78D6CC33261829F2004130DE /* CBNative.h */,
 			);
@@ -679,6 +684,7 @@
 				78D6CC3C261829F2004130DE /* CBNative.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				78D6CC40261829F2004130DE /* NSUserDefaults+Helper.m in Sources */,
+				78A725462618D7BE00D61E1B /* CBLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
