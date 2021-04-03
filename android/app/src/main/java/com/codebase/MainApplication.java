@@ -5,6 +5,7 @@ import android.content.Context;
 
 import androidx.multidex.MultiDex;
 
+import com.codebase.modules.CBLocationPackage;
 import com.codebase.modules.CBNativePackage;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
@@ -32,6 +33,7 @@ public class MainApplication extends Application implements ReactApplication {
                     // Packages that cannot be autolinked yet can be added manually here, for example:
                     // packages.add(new MyReactNativePackage());
                     packages.add(new CBNativePackage());
+                    packages.add(new CBLocationPackage());
                     return packages;
                 }
 
