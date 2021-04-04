@@ -1,7 +1,9 @@
+import React from 'react';
+import {StyleSheet} from 'react-native';
 import colors from 'configs/colors';
 import dimens from 'configs/dimens';
 
-export const appStyles = {
+export const appStyles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: colors.white
@@ -10,6 +12,16 @@ export const appStyles = {
         flex: 1,
         backgroundColor: colors.white
     },
+    title: {
+        fontSize: dimens.largeText,
+        color: colors.primaryTextColor,
+        fontWeight: 'bold'
+    },
+    label: {
+        fontSize: dimens.mediumText,
+        color: colors.primaryColor,
+        fontWeight: 'bold'
+    },
     text: {
         fontSize: dimens.normalText,
         color: colors.primaryTextColor
@@ -17,25 +29,24 @@ export const appStyles = {
     subtext: {
         fontSize: dimens.smallText,
         color: colors.secondaryTextColor
+    },
+    cover: {
+        width: '100%',
+        height: (0.9 * dimens.widthScreen) / 2
+    },
+    negative: {
+        fontSize: dimens.mediumText,
+        color: colors.primaryTextColor,
+        padding: 2
+    },
+    positive: {
+        fontSize: dimens.mediumText,
+        color: colors.primaryColor,
+        padding: 2
     }
-};
+});
 
-export const calendarStyles = {
-    backgroundColor: colors.white,
-    selectedDayBackgroundColor: colors.primaryColor,
-    selectedDayTextColor: colors.white,
-    todayTextColor: '#FF5E5E',
-    dayTextColor: colors.black,
-    textDisabledColor: '#D9E1E8',
-    dotColor: colors.primaryColor,
-    selectedDotColor: colors.white,
-    arrowColor: colors.primaryColor,
-    monthTextColor: colors.black,
-    textSectionTitleColor: colors.black,
-    textDayFontWeight: 'bold'
-};
-
-export const htmlStyles = {
+export const htmlStyles = StyleSheet.create({
     p: {
         fontSize: dimens.mediumText,
         color: colors.primaryTextColor
@@ -50,4 +61,4 @@ export const htmlStyles = {
         color: colors.primaryColor,
         textDecorationLine: 'underline'
     }
-};
+});

@@ -8,7 +8,6 @@ export default {
 
     backgroundColor: '#DEDEDE',
     contentColor: '#F2F2F2',
-    hiddenColor: '#555555',
     hideColor: '#DBDBDB',
     lineColor: '#DADADA',
 
