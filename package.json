@@ -25,6 +25,7 @@
     "numeral": "^2.0.6",
     "react": "16.13.1",
     "react-native": "0.63.4",
+    "react-native-code-push": "^7.0.0",
     "react-native-device-info": "^8.0.8",
     "react-native-dropdownalert": "^4.3.0",
     "react-native-elements": "^3.3.2",
