@@ -23,12 +23,28 @@ export const appStyles = StyleSheet.create({
         fontWeight: 'bold'
     },
     text: {
-        fontSize: dimens.normalText,
+        fontSize: dimens.mediumText,
         color: colors.primaryTextColor
     },
     subtext: {
+        fontSize: dimens.normalText,
+        color: colors.noteTextColor
+    },
+    blockquote: {
         fontSize: dimens.smallText,
-        color: colors.secondaryTextColor
+        color: colors.noteTextColor
+    },
+    caption: {
+        fontSize: dimens.smallText,
+        color: colors.primaryTextColor
+    },
+    letter: {
+        fontSize: dimens.atomText,
+        color: colors.primaryTextColor
+    },
+    error: {
+        fontSize: dimens.normalText,
+        color: colors.errorTextColor
     },
     cover: {
         width: '100%',
