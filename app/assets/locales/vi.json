@@ -3,5 +3,7 @@
   "button_cancel": "Hủy",
 
   "title_alert_crash": "Thông báo",
-  "message_alert_crash": "Tác vụ chưa được thực hiện. Vui lòng thử lại!"
+  "message_alert_crash": "Tác vụ chưa được thực hiện. Vui lòng thử lại!",
+  "title_alert_open_url": "Thông báo",
+  "message_alert_open_url": "Không mở được liên kết này. Vui lòng thử lại!"
 }
