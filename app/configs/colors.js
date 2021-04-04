@@ -14,7 +14,6 @@ export default {
     primaryTextColor: '#1D1D1D',
     secondaryTextColor: '#979797',
     placeholderTextColor: '#9B9B9B',
-    titleTextColor: '#707070',
     noteTextColor: '#979797',
     errorTextColor: '#DD2C00',
 
