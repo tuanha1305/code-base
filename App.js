@@ -1,14 +1,19 @@
 import React, {useEffect} from 'react';
-import {Alert, LogBox} from 'react-native';
+import {Alert, LogBox, StatusBar} from 'react-native';
 import {ThemeProvider} from 'react-native-elements';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
-import {helpers} from 'configs/themes';
-import {strings} from 'controls/i18n';
 import {setJSExceptionHandler, setNativeExceptionHandler} from 'react-native-exception-handler';
 import SplashScreen from 'react-native-splash-screen';
-import I18n from 'react-native-i18n';
-import moment from 'moment';
+import {ModalPortal} from 'react-native-modals';
+import {helpers} from 'configs/themes';
+import {strings} from 'controls/i18n';
+import colors from 'configs/colors';
+
+import DropdownAlert from 'react-native-dropdownalert';
+import DropdownAlertHolder from './DropdownAlertHolder';
+import DialogAlert from './DialogAlert';
+import DialogAlertHolder from './DialogAlertHolder';
 
 const errorHandler = (e, isFatal) => {
     if (isFatal) {
@@ -31,20 +36,21 @@ import Demo from 'screens/Demo';
 const Stack = createStackNavigator();
 const App: () => React$Node = () => {
 
-    I18n.locale = 'vi';
-    moment.locale('vi');
-
     useEffect(() => {
         SplashScreen.hide();
     }, []);
 
     return (
         <ThemeProvider theme={helpers('elements', 'light')}>
+            <StatusBar barStyle={'dark-content'} backgroundColor={colors.statusBarColor}/>
             <NavigationContainer initialRouteName={'Demo'}>
                 <Stack.Navigator screenOptions={{...TransitionPresets.SlideFromRightIOS}}>
                     <Stack.Screen name={'Demo'} component={Demo} options={{headerShown: false}}/>
                 </Stack.Navigator>
             </NavigationContainer>
+            <DropdownAlert ref={ref => DropdownAlertHolder.setDropdownAlert(ref)} inactiveStatusBarStyle={'dark-content'} inactiveStatusBarBackgroundColor={colors.statusBarColor}/>
+            <DialogAlert ref={ref => DialogAlertHolder.setDialogAlert(ref)}/>
+            <ModalPortal/>
         </ThemeProvider>
     );
 };
