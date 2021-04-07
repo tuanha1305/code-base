@@ -1,5 +1,6 @@
 export default {
-    statusBarColor: '#FFFFFF',
+    statusBarLightColor: '#FFFFFF',
+    statusBarDarkColor: '#000000',
 
     primaryColor: '#673AB7',
     primaryDarkColor: '#512DA8',

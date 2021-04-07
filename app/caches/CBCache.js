@@ -1,4 +1,5 @@
 export default {
+    uniqueId: '',
     deviceId: '',
     deviceName: '',
     manufacturer: '',

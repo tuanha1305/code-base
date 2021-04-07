@@ -5,6 +5,12 @@
 
   "title_alert_crash": "Thông báo",
   "message_alert_crash": "Tác vụ chưa được thực hiện. Vui lòng thử lại!",
+  "title_alert_no_connection": "Không thể kết nối",
+  "message_alert_no_connection": "Vui lòng kiểm tra lại kết nối mạng Wifi/3G/4G của bạn!",
+  "title_alert_no_internet": "Không có internet",
+  "message_alert_no_internet": "Không có kết nối internet. Vui lòng cài đặt mạng Wifi/3G/4G!",
+  "title_alert_strength_internet": "Tín hiệu internet yếu",
+  "message_alert_strength_internet": "Kết nối internet không ổn định. Vui lòng bật/tắt mạng Wifi/3G/4G và thử lại!",
   "title_alert_open_url": "Thông báo",
   "message_alert_open_url": "Không mở được liên kết này. Vui lòng thử lại!"
 }

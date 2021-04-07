@@ -1,7 +1,15 @@
+import {DefaultTheme, DarkTheme} from '@react-navigation/native';
 import colors from 'configs/colors';
 import dimens from 'configs/dimens';
 
 const lightTheme = {
+    navigation: {
+        ...DefaultTheme,
+        colors: {
+            ...DefaultTheme.colors,
+            primary: colors.primaryColor
+        }
+    },
     elements: {
         colors: {
             primary: colors.primaryColor
@@ -16,10 +24,19 @@ const lightTheme = {
                 backgroundColor: colors.white
             }
         }
-    }
+    },
+    status: colors.white
+
 };
 
 const darkTheme = {
+    navigation: {
+        ...DarkTheme,
+        colors: {
+            ...DarkTheme.colors,
+            primary: colors.primaryColor
+        }
+    },
     elements: {
         colors: {
             primary: colors.primaryColor
@@ -34,7 +51,8 @@ const darkTheme = {
                 backgroundColor: colors.white
             }
         }
-    }
+    },
+    status: colors.white
 };
 
 export function helpers(name, theme) {

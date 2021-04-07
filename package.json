@@ -41,6 +41,7 @@
     "react-native-dropdownalert": "^4.3.0",
     "react-native-elements": "^3.3.2",
     "react-native-exception-handler": "^2.10.10",
+    "react-native-fbsdk": "^3.0.0",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-get-random-values": "^1.6.0",
     "react-native-htmlview": "^0.16.0",
