@@ -16,6 +16,8 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* CodeBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CodeBaseTests.m */; };
 		781D00B5261A0F6D00B4DF55 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 781D00B4261A0F6C00B4DF55 /* AppCenter-Config.plist */; };
+		786B8D40261D8EAA00D1DEDB /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B8D3F261D8EAA00D1DEDB /* NotificationService.m */; };
+		786B8D44261D8EAA00D1DEDB /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 786B8D3C261D8EAA00D1DEDB /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		78A725462618D7BE00D61E1B /* CBLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A725452618D7BE00D61E1B /* CBLocation.m */; };
 		78D6CC3C261829F2004130DE /* CBNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D6CC2F261829F2004130DE /* CBNative.m */; };
 		78D6CC3F261829F2004130DE /* DeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D6CC37261829F2004130DE /* DeviceUtil.m */; };
@@ -43,7 +45,28 @@
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "CodeBase-tvOS";
 		};
+		786B8D42261D8EAA00D1DEDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 786B8D3B261D8EAA00D1DEDB;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		786B8D48261D8EAA00D1DEDB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				786B8D44261D8EAA00D1DEDB /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
@@ -64,6 +87,12 @@
 		661DB954760131F6CA8D54C2 /* libPods-CodeBase-CodeBaseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeBase-CodeBaseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		738BA7E815FBF3E382A8F574 /* Pods-CodeBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBase.debug.xcconfig"; path = "Target Support Files/Pods-CodeBase/Pods-CodeBase.debug.xcconfig"; sourceTree = "<group>"; };
 		781D00B4261A0F6C00B4DF55 /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "CodeBase/AppCenter-Config.plist"; sourceTree = "<group>"; };
+		786B8D33261D8E4800D1DEDB /* CodeBase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = CodeBase.entitlements; path = CodeBase/CodeBase.entitlements; sourceTree = "<group>"; };
+		786B8D3C261D8EAA00D1DEDB /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		786B8D3E261D8EAA00D1DEDB /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		786B8D3F261D8EAA00D1DEDB /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		786B8D41261D8EAA00D1DEDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		786B8D53261D8FAE00D1DEDB /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		78A725442618D7BE00D61E1B /* CBLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLocation.h; sourceTree = "<group>"; };
 		78A725452618D7BE00D61E1B /* CBLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLocation.m; sourceTree = "<group>"; };
 		78D6CC2F261829F2004130DE /* CBNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBNative.m; sourceTree = "<group>"; };
@@ -118,6 +147,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		786B8D39261D8EAA00D1DEDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -156,6 +192,7 @@
 		13B07FAE1A68108700A75B9A /* CodeBase */ = {
 			isa = PBXGroup;
 			children = (
+				786B8D33261D8E4800D1DEDB /* CodeBase.entitlements */,
 				781D00B4261A0F6C00B4DF55 /* AppCenter-Config.plist */,
 				78D6CC38261829F2004130DE /* Helpers */,
 				78D6CC2C261829F2004130DE /* Modules */,
@@ -182,6 +219,17 @@
 				9B5F26C16D144057D9BBBE08 /* libPods-CodeBase-tvOSTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		786B8D3D261D8EAA00D1DEDB /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				786B8D53261D8FAE00D1DEDB /* OneSignalNotificationServiceExtension.entitlements */,
+				786B8D3E261D8EAA00D1DEDB /* NotificationService.h */,
+				786B8D3F261D8EAA00D1DEDB /* NotificationService.m */,
+				786B8D41261D8EAA00D1DEDB /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
 		78D6CC2C261829F2004130DE /* Modules */ = {
@@ -227,6 +275,7 @@
 				13B07FAE1A68108700A75B9A /* CodeBase */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* CodeBaseTests */,
+				786B8D3D261D8EAA00D1DEDB /* OneSignalNotificationServiceExtension */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				129B7CBBCE5EC9E531DA8D23 /* Pods */,
@@ -243,6 +292,7 @@
 				00E356EE1AD99517003FC87E /* CodeBaseTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* CodeBase-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* CodeBase-tvOSTests.xctest */,
+				786B8D3C261D8EAA00D1DEDB /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -283,10 +333,12 @@
 				7D6CFD52801371A5826DEE43 /* [CP] Copy Pods Resources */,
 				C51B6AA5D161FE680181C6CF /* [CP-User] [RNFB] Core Configuration */,
 				8A2872E498590F3A6D2F5366 /* [CP-User] [RNFB] Crashlytics Configuration */,
+				786B8D48261D8EAA00D1DEDB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				786B8D43261D8EAA00D1DEDB /* PBXTargetDependency */,
 			);
 			name = CodeBase;
 			productName = CodeBase;
@@ -332,6 +384,23 @@
 			productReference = 2D02E4901E0B4A5D006451C7 /* CodeBase-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		786B8D3B261D8EAA00D1DEDB /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 786B8D45261D8EAA00D1DEDB /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				786B8D38261D8EAA00D1DEDB /* Sources */,
+				786B8D39261D8EAA00D1DEDB /* Frameworks */,
+				786B8D3A261D8EAA00D1DEDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 786B8D3C261D8EAA00D1DEDB /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -345,6 +414,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = KK92998SXF;
 						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -355,6 +425,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2D02E47A1E0B4A5D006451C7;
+					};
+					786B8D3B261D8EAA00D1DEDB = {
+						CreatedOnToolsVersion = 12.4;
+						DevelopmentTeam = KK92998SXF;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -375,6 +450,7 @@
 				00E356ED1AD99517003FC87E /* CodeBaseTests */,
 				2D02E47A1E0B4A5D006451C7 /* CodeBase-tvOS */,
 				2D02E48F1E0B4A5D006451C7 /* CodeBase-tvOSTests */,
+				786B8D3B261D8EAA00D1DEDB /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -407,6 +483,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2D02E48E1E0B4A5D006451C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		786B8D3A261D8EAA00D1DEDB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -739,6 +822,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		786B8D38261D8EAA00D1DEDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				786B8D40261D8EAA00D1DEDB /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -751,6 +842,11 @@
 			isa = PBXTargetDependency;
 			target = 2D02E47A1E0B4A5D006451C7 /* CodeBase-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
+		};
+		786B8D43261D8EAA00D1DEDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 786B8D3B261D8EAA00D1DEDB /* OneSignalNotificationServiceExtension */;
+			targetProxy = 786B8D42261D8EAA00D1DEDB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -804,7 +900,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CodeBase/CodeBase.entitlements;
 				CURRENT_PROJECT_VERSION = 10000;
+				DEVELOPMENT_TEAM = KK92998SXF;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CodeBase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -828,7 +926,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CodeBase/CodeBase.entitlements;
 				CURRENT_PROJECT_VERSION = 10000;
+				DEVELOPMENT_TEAM = KK92998SXF;
 				INFOPLIST_FILE = CodeBase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0.0;
@@ -951,6 +1051,60 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeBase-tvOS.app/CodeBase-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Release;
+		};
+		786B8D46261D8EAA00D1DEDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = KK92998SXF;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codebase.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		786B8D47261D8EAA00D1DEDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = KK92998SXF;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codebase.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1102,6 +1256,15 @@
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
 				2D02E49A1E0B4A5E006451C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		786B8D45261D8EAA00D1DEDB /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				786B8D46261D8EAA00D1DEDB /* Debug */,
+				786B8D47261D8EAA00D1DEDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
