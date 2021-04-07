@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
-import {Alert, LogBox, StatusBar} from 'react-native';
+import {Alert, LogBox, StatusBar, useColorScheme} from 'react-native';
 import {ThemeProvider} from 'react-native-elements';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, DefaultTheme, DarkTheme} from '@react-navigation/native';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {setJSExceptionHandler, setNativeExceptionHandler} from 'react-native-exception-handler';
 import SplashScreen from 'react-native-splash-screen';
@@ -31,19 +31,37 @@ setNativeExceptionHandler((errorString) => {
 
 LogBox.ignoreAllLogs(__DEV__);
 
+const CBDefaultTheme = {
+    ...DefaultTheme,
+    colors: {
+        ...DefaultTheme.colors,
+        primary: '#FFFFFF'
+    }
+};
+
+const CBDarkTheme = {
+    ...DarkTheme,
+    colors: {
+        ...DarkTheme.colors,
+        primary: '#000000'
+    }
+};
+
 import Demo from 'screens/Demo';
 
 const Stack = createStackNavigator();
 const App: () => React$Node = () => {
+
+    const scheme = useColorScheme();
 
     useEffect(() => {
         SplashScreen.hide();
     }, []);
 
     return (
-        <ThemeProvider theme={helpers('elements', 'light')}>
+        <ThemeProvider theme={helpers('elements', scheme)}>
             <StatusBar barStyle={'dark-content'} backgroundColor={colors.statusBarColor}/>
-            <NavigationContainer initialRouteName={'Demo'}>
+            <NavigationContainer theme={scheme === 'dark' ? CBDarkTheme : CBDefaultTheme} initialRouteName={'Demo'}>
                 <Stack.Navigator screenOptions={{...TransitionPresets.SlideFromRightIOS}}>
                     <Stack.Screen name={'Demo'} component={Demo} options={{headerShown: false}}/>
                 </Stack.Navigator>
