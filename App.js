@@ -10,7 +10,6 @@ import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {setJSExceptionHandler, setNativeExceptionHandler} from 'react-native-exception-handler';
 import dynamicLinks from '@react-native-firebase/dynamic-links';
 import messaging from '@react-native-firebase/messaging';
-import SplashScreen from 'react-native-splash-screen';
 import {ModalPortal} from 'react-native-modals';
 import DeviceInfo from 'react-native-device-info';
 import OneSignal from 'react-native-onesignal';
@@ -54,8 +53,6 @@ export default class App extends Component {
     }
 
     componentDidMount() {
-        SplashScreen.hide();
-
         ConfigManager.execute();
         Promise.all([DeviceInfo.getDeviceName(), DeviceInfo.getManufacturer(), DeviceInfo.isEmulator()]).then(values => {
             CBCache.uniqueId = DeviceInfo.getUniqueId();
@@ -92,18 +89,15 @@ export default class App extends Component {
         Linking.removeEventListener('url', this.handleOpenUrl);
 
         if (this.unsubscribeDynamicLinks) this.unsubscribeDynamicLinks();
+
         if (this.unsubscribeMessaging) this.unsubscribeMessaging();
     }
 
     handleConnectivityChange = (state) => {
         const {appState: action} = this.state;
         if (action === 'active') {
-            const {isConnected, isInternetReachable} = state;
-            if (isConnected) {
-                if (!isInternetReachable) {
-                    //DropdownAlertHolder.alertWithType('warn', strings('title_alert_strength_internet'), strings('message_alert_strength_internet'));
-                }
-            } else {
+            const {isConnected} = state;
+            if (!isConnected) {
                 DropdownAlertHolder.alertWithType('error', strings('title_alert_no_internet'), strings('message_alert_no_internet'));
             }
         }

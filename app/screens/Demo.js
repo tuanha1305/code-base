@@ -1,19 +1,26 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
     Text,
     View
 } from 'react-native';
-import {useTheme} from '@react-navigation/native';
 import {CBView} from 'components';
+import SplashScreen from 'react-native-splash-screen';
 import {appStyles} from 'configs/styles';
 
 const Demo = ({navigation, route}) => {
-    const {colors} = useTheme();
+
+    useEffect(() => {
+        SplashScreen.hide();
+    }, []);
+
+    const onPress = () => {
+
+    };
 
     return (
         <CBView style={appStyles.container}>
-            <View style={[appStyles.content, {backgroundColor: colors.primary, alignItems: 'center', justifyContent: 'center'}]}>
-                <Text style={appStyles.text}>{'Demo'}</Text>
+            <View style={[appStyles.content, {alignItems: 'center', justifyContent: 'center'}]}>
+                <Text style={appStyles.text} onPress={onPress}>{'Demo'}</Text>
             </View>
         </CBView>
     );
