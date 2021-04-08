@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@invertase/react-native-apple-authentication": "^2.1.1",
     "@react-native-async-storage/async-storage": "^1.15.2",
     "@react-native-community/art": "^1.2.0",
     "@react-native-community/clipboard": "^1.5.1",
@@ -24,6 +25,7 @@
     "@react-native-firebase/messaging": "^11.2.0",
     "@react-native-firebase/perf": "^11.2.0",
     "@react-native-firebase/remote-config": "^11.2.0",
+    "@react-native-google-signin/google-signin": "^6.0.0",
     "@react-native-picker/picker": "^1.14.0",
     "@react-navigation/native": "^5.9.4",
     "@react-navigation/stack": "^5.14.4",
@@ -31,11 +33,13 @@
     "appcenter-analytics": "4.1.0",
     "appcenter-crashes": "4.1.0",
     "axios": "^0.21.1",
+    "crypto-js": "^4.0.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "numeral": "^2.0.6",
     "react": "16.13.1",
     "react-native": "0.63.4",
+    "react-native-calendars": "^1.1255.0",
     "react-native-code-push": "^7.0.0",
     "react-native-device-info": "^8.0.8",
     "react-native-dropdownalert": "^4.3.0",
@@ -63,6 +67,7 @@
     "react-native-splash-screen": "^3.2.0",
     "react-native-vector-icons": "^8.1.0",
     "react-native-webview": "^11.3.2",
+    "realm": "^10.3.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
