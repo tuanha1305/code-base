@@ -10,6 +10,7 @@ import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {setJSExceptionHandler, setNativeExceptionHandler} from 'react-native-exception-handler';
 import dynamicLinks from '@react-native-firebase/dynamic-links';
 import messaging from '@react-native-firebase/messaging';
+import SplashScreen from 'react-native-splash-screen';
 import {ModalPortal} from 'react-native-modals';
 import DeviceInfo from 'react-native-device-info';
 import {Settings} from 'react-native-fbsdk-next';
@@ -24,6 +25,7 @@ import DialogAlert from './DialogAlert';
 import DialogAlertHolder from './DialogAlertHolder';
 
 import Demo from 'screens/Demo';
+import CBConfig from "configs/CBConfig";
 
 const errorHandler = (e, isFatal) => {
     if (isFatal) {
@@ -81,6 +83,36 @@ export default class App extends Component {
         this.unsubscribeMessaging = messaging().onMessage(async (remoteMessage) => {
             console.log('dctan :: ' + JSON.stringify(remoteMessage));
         });
+
+        OneSignal.setAppId(CBConfig.ONE_SIGNAL_APP_ID);
+        OneSignal.setLogLevel(6, 0);
+        OneSignal.setRequiresUserPrivacyConsent(false);
+        OneSignal.promptForPushNotificationsWithUserResponse(response => {
+
+        });
+        OneSignal.setNotificationWillShowInForegroundHandler(notifReceivedEvent => {
+
+        });
+        OneSignal.setNotificationOpenedHandler(notification => {
+
+        });
+        OneSignal.setInAppMessageClickHandler(event => {
+
+        });
+        OneSignal.addEmailSubscriptionObserver((event) => {
+
+        });
+        OneSignal.addSubscriptionObserver(event => {
+
+        });
+        OneSignal.addPermissionObserver(event => {
+
+        });
+        OneSignal.getDeviceState().then(deviceState => {
+            this.setState({
+                isSubscribed: deviceState.isSubscribed
+            }, this.onLoaded);
+        }).catch((error) => console.error('An error occurred', error));
     }
 
     componentWillUnmount() {
@@ -94,6 +126,10 @@ export default class App extends Component {
 
         if (this.unsubscribeMessaging) this.unsubscribeMessaging();
     }
+
+    onLoaded = () => {
+        SplashScreen.hide();
+    };
 
     handleConnectivityChange = (state) => {
         const {appState: action} = this.state;
