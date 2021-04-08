@@ -6,11 +6,11 @@ import dimens from 'configs/dimens';
 export const appStyles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.white
+        backgroundColor: colors.contentColor
     },
     content: {
         flex: 1,
-        backgroundColor: colors.white
+        backgroundColor: colors.contentColor
     },
     title: {
         fontSize: dimens.largeText,

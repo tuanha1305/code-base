@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Appearance, AppState, Linking, LogBox, StatusBar} from 'react-native';
 import NetInfo from '@react-native-community/netinfo';
 import CBCache from 'caches/CBCache';
+import CBConfig from 'configs/CBConfig';
 import ConfigManager from 'controls/ConfigManager';
 import CBDeeplinkHandler from 'handlers/CBDeeplinkHandler';
 import {ThemeProvider} from 'react-native-elements';
@@ -25,7 +26,6 @@ import DialogAlert from './DialogAlert';
 import DialogAlertHolder from './DialogAlertHolder';
 
 import Demo from 'screens/Demo';
-import CBConfig from "configs/CBConfig";
 
 const errorHandler = (e, isFatal) => {
     if (isFatal) {
@@ -127,10 +127,6 @@ export default class App extends Component {
         if (this.unsubscribeMessaging) this.unsubscribeMessaging();
     }
 
-    onLoaded = () => {
-        SplashScreen.hide();
-    };
-
     handleConnectivityChange = (state) => {
         const {appState: action} = this.state;
         if (action === 'active') {
@@ -153,10 +149,14 @@ export default class App extends Component {
         CBDeeplinkHandler.handleDynamicUrl(link?.url);
     };
 
+    onLoaded = () => {
+        SplashScreen.hide();
+    };
+
     render() {
         const scheme = Appearance.getColorScheme();
         const barStyle = scheme === 'dark' ? 'light-content' : 'dark-content';
-        const statusBarColor = scheme === 'dark' ? colors.statusBarLightColor : colors.statusBarDarkColor;
+        const statusBarColor = scheme === 'dark' ? colors.statusBarColor : colors.statusBarDarkColor;
         return (
             <ThemeProvider theme={helpers('elements', scheme)}>
                 <StatusBar barStyle={barStyle} backgroundColor={statusBarColor}/>

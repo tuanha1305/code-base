@@ -7,7 +7,9 @@ const lightTheme = {
         ...DefaultTheme,
         colors: {
             ...DefaultTheme.colors,
-            primary: colors.primaryColor
+            primary: colors.primaryColor,
+            backgroundColor: colors.contentColor,
+            card: colors.contentColor
         }
     },
     elements: {
@@ -25,8 +27,35 @@ const lightTheme = {
             }
         }
     },
-    status: colors.white
-
+    html: {
+        p: {
+            fontSize: dimens.mediumText,
+            color: colors.primaryTextColor
+        },
+        b: {
+            fontSize: dimens.mediumText,
+            color: colors.primaryTextColor,
+            fontWeight: 'bold'
+        },
+        a: {
+            fontSize: dimens.mediumText,
+            color: colors.primaryColor,
+            textDecorationLine: 'underline'
+        }
+    },
+    container: {
+        backgroundColor: colors.contentColor
+    },
+    content: {
+        backgroundColor: colors.contentColor
+    },
+    border: {
+        borderColor: colors.lineColor,
+        borderLeftColor: colors.lineColor
+    },
+    text: {
+        color: colors.primaryTextColor
+    }
 };
 
 const darkTheme = {
@@ -34,7 +63,9 @@ const darkTheme = {
         ...DarkTheme,
         colors: {
             ...DarkTheme.colors,
-            primary: colors.primaryColor
+            primary: colors.primaryColor,
+            background: colors.contentDarkColor,
+            card: colors.contentDarkColor
         }
     },
     elements: {
@@ -52,7 +83,35 @@ const darkTheme = {
             }
         }
     },
-    status: colors.white
+    html: {
+        p: {
+            fontSize: dimens.mediumText,
+            color: colors.primaryTextDarkColor
+        },
+        b: {
+            fontSize: dimens.mediumText,
+            color: colors.primaryTextDarkColor,
+            fontWeight: 'bold'
+        },
+        a: {
+            fontSize: dimens.mediumText,
+            color: colors.primaryColor,
+            textDecorationLine: 'underline'
+        }
+    },
+    container: {
+        backgroundColor: colors.contentDarkColor
+    },
+    content: {
+        backgroundColor: colors.contentDarkColor
+    },
+    border: {
+        borderColor: colors.lineDarkColor,
+        borderLeftColor: colors.lineDarkColor
+    },
+    text: {
+        color: colors.primaryTextDarkColor
+    }
 };
 
 export function helpers(name, theme) {

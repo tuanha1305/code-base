@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import {
+    Appearance,
     Image,
     Keyboard,
     Text,
@@ -17,7 +18,8 @@ import CBControl from 'controls/CBControl';
 import CBHandler from 'handlers/CBHandler';
 import ImageUtil from 'utils/ImageUtil';
 import HTMLView from 'react-native-htmlview';
-import {appStyles, htmlStyles} from 'configs/styles';
+import {appStyles} from 'configs/styles';
+import {helpers} from 'configs/themes';
 import {strings} from 'controls/i18n';
 
 export default class DialogAlert extends PureComponent {
@@ -104,19 +106,24 @@ export default class DialogAlert extends PureComponent {
     };
 
     renderButtons() {
+        const scheme = Appearance.getColorScheme();
+        const borderStyle = helpers('border', scheme);
+        const textStyle = helpers('text', scheme);
         const {buttons} = this.state;
         if (buttons && buttons.length > 1) {
             return (
-                <ModalFooter>
+                <ModalFooter style={borderStyle}>
                     <ModalButton
                         key={'negative'}
+                        style={borderStyle}
                         text={buttons[0] && buttons[0].text ? buttons[0].text.toUpperCase() : ''}
-                        textStyle={appStyles.negative}
+                        textStyle={[appStyles.negative, textStyle]}
                         onPress={this.onPress(0)}
                         bordered={true}
                     />
                     <ModalButton
                         key={'positive'}
+                        style={borderStyle}
                         text={buttons[1] && buttons[1].text ? buttons[1].text.toUpperCase() : ''}
                         textStyle={appStyles.positive}
                         onPress={this.onPress(1)}
@@ -126,9 +133,10 @@ export default class DialogAlert extends PureComponent {
             );
         } else if (buttons && buttons.length > 0) {
             return (
-                <ModalFooter>
+                <ModalFooter style={borderStyle}>
                     <ModalButton
                         key={'positive'}
+                        style={borderStyle}
                         text={buttons[0] && buttons[0].text ? buttons[0].text.toUpperCase() : ''}
                         textStyle={appStyles.positive}
                         onPress={this.onPress(0)}
@@ -139,9 +147,10 @@ export default class DialogAlert extends PureComponent {
             );
         } else {
             return (
-                <ModalFooter>
+                <ModalFooter style={borderStyle}>
                     <ModalButton
                         key={'positive'}
+                        style={borderStyle}
                         text={strings('button_close').toUpperCase()}
                         textStyle={appStyles.positive}
                         onPress={this.onClose}
@@ -165,6 +174,10 @@ export default class DialogAlert extends PureComponent {
     };
 
     render() {
+        const scheme = Appearance.getColorScheme();
+        const contentStyle = helpers('content', scheme);
+        const textStyle = helpers('text', scheme);
+        const htmlStyles = helpers('html', scheme);
         const {visible, title, message, options} = this.state;
         const {uri, children, html} = options;
         return (
@@ -174,13 +187,14 @@ export default class DialogAlert extends PureComponent {
                 onHardwareBackPress={this.onHardwareBackPress}
                 width={0.9}
                 visible={visible}
+                modalStyle={contentStyle}
                 modalAnimation={this.modalAnimation}
                 modalTitle={uri ? <Image style={appStyles.cover} source={ImageUtil.getImage(uri)}/> : null}
                 footer={this.renderButtons()}>
                 <TouchableWithoutFeedback onPress={this.onBlur}>
-                    <ModalContent style={{paddingHorizontal: 15}}>
-                        {title ? <Text style={[appStyles.title, {textAlign: 'center', marginTop: uri ? 24 : 0}]}>{title}</Text>: null}
-                        {message ? <Text style={[appStyles.text, {textAlign: 'center', marginTop: title ? 10 : uri ? 24 : 0}]}>{message}</Text> : null}
+                    <ModalContent style={[{paddingHorizontal: 15}, contentStyle]}>
+                        {title ? <Text style={[appStyles.title, {textAlign: 'center', marginTop: uri ? 24 : 0}, textStyle]}>{title}</Text>: null}
+                        {message ? <Text style={[appStyles.text, {textAlign: 'center', marginTop: title ? 10 : uri ? 24 : 0}, textStyle]}>{message}</Text> : null}
                         {
                             html ?
                                 <HTMLView
