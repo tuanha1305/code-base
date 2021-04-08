@@ -1,6 +1,6 @@
 import analytics from '@react-native-firebase/analytics';
 import OneSignal from 'react-native-onesignal';
-import {AppEventsLogger} from 'react-native-fbsdk';
+import {AppEventsLogger} from 'react-native-fbsdk-next';
 import Analytics from 'appcenter-analytics';
 
 export default class EventTracker {

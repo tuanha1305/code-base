@@ -12,6 +12,7 @@ import dynamicLinks from '@react-native-firebase/dynamic-links';
 import messaging from '@react-native-firebase/messaging';
 import {ModalPortal} from 'react-native-modals';
 import DeviceInfo from 'react-native-device-info';
+import {Settings} from 'react-native-fbsdk-next';
 import OneSignal from 'react-native-onesignal';
 import {helpers} from 'configs/themes';
 import {strings} from 'controls/i18n';
@@ -46,6 +47,7 @@ export default class App extends Component {
 
     constructor(props) {
         super(props);
+        Settings.initializeSDK();
         this.state = {
             appState: AppState.currentState,
             isSubscribed: false
