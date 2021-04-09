@@ -61,20 +61,3 @@ export const appStyles = StyleSheet.create({
         padding: 2
     }
 });
-
-export const htmlStyles = StyleSheet.create({
-    p: {
-        fontSize: dimens.mediumText,
-        color: colors.primaryTextColor
-    },
-    b: {
-        fontSize: dimens.mediumText,
-        color: colors.primaryTextColor,
-        fontWeight: 'bold'
-    },
-    a: {
-        fontSize: dimens.mediumText,
-        color: colors.primaryColor,
-        textDecorationLine: 'underline'
-    }
-});

@@ -9,7 +9,10 @@ const lightTheme = {
             ...DefaultTheme.colors,
             primary: colors.primaryColor,
             backgroundColor: colors.contentColor,
-            card: colors.contentColor
+            card: colors.contentColor,
+            text: colors.primaryTextColor,
+            border: colors.lineColor,
+            notification: colors.badgeColor
         }
     },
     elements: {
@@ -65,7 +68,10 @@ const darkTheme = {
             ...DarkTheme.colors,
             primary: colors.primaryColor,
             background: colors.contentDarkColor,
-            card: colors.contentDarkColor
+            card: colors.contentDarkColor,
+            text: colors.primaryTextDarkColor,
+            border: colors.lineDarkColor,
+            notification: colors.badgeDarkColor
         }
     },
     elements: {

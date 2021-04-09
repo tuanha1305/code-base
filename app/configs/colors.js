@@ -9,6 +9,8 @@ export default {
     hideColor: '#DBDBDB',
     lineColor: '#DADADA',
     lineDarkColor: '#FFFFFF',
+    badgeColor: '#EB3928',
+    badgeDarkColor: '#EB3928',
 
     primaryTextColor: '#1D1D1D',
     primaryTextDarkColor: '#FFFFFF',
