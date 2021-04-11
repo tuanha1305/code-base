@@ -2,6 +2,11 @@
   "button_ok": "Đồng ý",
   "button_cancel": "Hủy",
   "button_close": "Đóng",
+  "button_home": "Màn hình chính",
+  "button_update": "Cập nhật",
+
+  "text_opps": "Rất tiếc!",
+  "text_not_found": "Xin lỗi, không tìm thấy trang này. Vui lòng thử lại hoặc cập nhật ứng dụng.",
 
   "title_alert_crash": "Thông báo",
   "message_alert_crash": "Tác vụ chưa được thực hiện. Vui lòng thử lại!",

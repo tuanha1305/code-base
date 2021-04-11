@@ -12,6 +12,10 @@ export const appStyles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.contentColor
     },
+    body: {
+        flex: 1,
+        padding: 15
+    },
     title: {
         fontSize: dimens.largeText,
         color: colors.primaryTextColor,
@@ -55,5 +59,16 @@ export const appStyles = StyleSheet.create({
         fontSize: dimens.mediumText,
         color: colors.primaryColor,
         padding: 2
+    },
+    footer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingVertical: 10,
+        paddingHorizontal: 15
+    },
+    action: {
+        borderRadius: 20,
+        borderWidth: 1
     }
 });

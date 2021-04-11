@@ -20,6 +20,9 @@ const lightTheme = {
             primary: colors.primaryColor
         },
         Button: {
+            buttonStyle: {
+                borderWidth: 1
+            },
             disabledTitleStyle: {
                 color: colors.tertiaryTextColor
             }
@@ -56,8 +59,14 @@ const lightTheme = {
         borderColor: colors.lineColor,
         borderLeftColor: colors.lineColor
     },
+    title: {
+        color: colors.primaryTextColor
+    },
     text: {
         color: colors.primaryTextColor
+    },
+    subtext: {
+        color: colors.secondaryTextColor
     }
 };
 
@@ -79,6 +88,9 @@ const darkTheme = {
             primary: colors.primaryDarkColor
         },
         Button: {
+            buttonStyle: {
+                borderWidth: 1
+            },
             disabledTitleStyle: {
                 color: colors.tertiaryTextDarkColor
             }
@@ -115,8 +127,14 @@ const darkTheme = {
         borderColor: colors.lineDarkColor,
         borderLeftColor: colors.lineDarkColor
     },
+    title: {
+        color: colors.primaryTextDarkColor
+    },
     text: {
         color: colors.primaryTextDarkColor
+    },
+    subtext: {
+        color: colors.secondaryTextDarkColor
     }
 };
 

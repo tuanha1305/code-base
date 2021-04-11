@@ -176,12 +176,20 @@ export default class App extends Component {
     render() {
         const scheme = Appearance.getColorScheme();
         const barStyle = scheme === 'dark' ? 'light-content' : 'dark-content';
-        const statusBarColor = scheme === 'dark' ? colors.statusBarColor : colors.statusBarDarkColor;
+        const statusBarColor = scheme === 'dark' ? colors.statusBarDarkColor : colors.statusBarColor;
+        const textColor = scheme === 'dark' ? colors.primaryTextDarkColor : colors.primaryTextColor;
         return (
             <ThemeProvider theme={helpers('elements', scheme)}>
                 <StatusBar barStyle={barStyle} backgroundColor={statusBarColor}/>
                 <NavigationContainer ref={this.navigationRef} onReady={this.onReady} onStateChange={this.onStateChange} theme={helpers('navigation', scheme)} initialRouteName={'Demo'}>
-                    <Stack.Navigator screenOptions={{...TransitionPresets.SlideFromRightIOS}}>
+                    <Stack.Navigator mode={'modal'} screenOptions={{
+                        ...TransitionPresets.SlideFromRightIOS,
+                        headerBackTitleVisible: false,
+                        headerTitleAllowFontScaling: false,
+                        headerBackAllowFontScaling: false,
+                        headerTitleAlign: 'center',
+                        headerTintColor: textColor
+                    }}>
                         <Stack.Screen name={'Demo'} component={Demo}/>
                         <Stack.Screen name={'Empty'} component={Empty}/>
                     </Stack.Navigator>
