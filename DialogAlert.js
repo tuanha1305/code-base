@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import {
-    Appearance,
     Image,
     Keyboard,
     Text,
@@ -106,9 +105,9 @@ export default class DialogAlert extends PureComponent {
     };
 
     renderButtons() {
-        const scheme = Appearance.getColorScheme();
-        const borderStyle = helpers('border', scheme);
-        const textStyle = helpers('text', scheme);
+        const {theme} = this.props;
+        const borderStyle = helpers('border', theme);
+        const textStyle = helpers('text', theme);
         const {buttons} = this.state;
         if (buttons && buttons.length > 1) {
             return (
@@ -174,10 +173,10 @@ export default class DialogAlert extends PureComponent {
     };
 
     render() {
-        const scheme = Appearance.getColorScheme();
-        const contentStyle = helpers('content', scheme);
-        const textStyle = helpers('text', scheme);
-        const htmlStyles = helpers('html', scheme);
+        const {theme} = this.props;
+        const contentStyle = helpers('content', theme);
+        const textStyle = helpers('text', theme);
+        const htmlStyles = helpers('html', theme);
         const {visible, title, message, options} = this.state;
         const {uri, children, html} = options;
         return (

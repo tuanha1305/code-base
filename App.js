@@ -9,6 +9,7 @@ import {ThemeProvider} from 'react-native-elements';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {setJSExceptionHandler, setNativeExceptionHandler} from 'react-native-exception-handler';
+import analytics from '@react-native-firebase/analytics';
 import dynamicLinks from '@react-native-firebase/dynamic-links';
 import messaging from '@react-native-firebase/messaging';
 import SplashScreen from 'react-native-splash-screen';
@@ -26,6 +27,7 @@ import DialogAlert from './DialogAlert';
 import DialogAlertHolder from './DialogAlertHolder';
 
 import Demo from 'screens/Demo';
+import Empty from 'screens/Empty';
 
 const errorHandler = (e, isFatal) => {
     if (isFatal) {
@@ -50,6 +52,8 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         Settings.initializeSDK();
+        this.navigationRef = React.createRef();
+        this.routeNameRef = React.createRef();
         this.state = {
             appState: AppState.currentState,
             isSubscribed: false
@@ -153,6 +157,22 @@ export default class App extends Component {
         SplashScreen.hide();
     };
 
+    onReady = () => {
+        this.routeNameRef.current = this.navigationRef.current.getCurrentRoute().name;
+    };
+
+    onStateChange = async () => {
+        const previousRouteName = this.routeNameRef.current;
+        const currentRouteName = this.navigationRef.current.getCurrentRoute().name;
+        if (previousRouteName !== currentRouteName) {
+            await analytics().logScreenView({
+                screen_name: currentRouteName,
+                screen_class: currentRouteName
+            });
+        }
+        this.routeNameRef.current = currentRouteName;
+    };
+
     render() {
         const scheme = Appearance.getColorScheme();
         const barStyle = scheme === 'dark' ? 'light-content' : 'dark-content';
@@ -160,13 +180,14 @@ export default class App extends Component {
         return (
             <ThemeProvider theme={helpers('elements', scheme)}>
                 <StatusBar barStyle={barStyle} backgroundColor={statusBarColor}/>
-                <NavigationContainer theme={helpers('navigation', scheme)} initialRouteName={'Demo'}>
+                <NavigationContainer ref={this.navigationRef} onReady={this.onReady} onStateChange={this.onStateChange} theme={helpers('navigation', scheme)} initialRouteName={'Demo'}>
                     <Stack.Navigator screenOptions={{...TransitionPresets.SlideFromRightIOS}}>
                         <Stack.Screen name={'Demo'} component={Demo}/>
+                        <Stack.Screen name={'Empty'} component={Empty}/>
                     </Stack.Navigator>
                 </NavigationContainer>
                 <DropdownAlert ref={ref => DropdownAlertHolder.setDropdownAlert(ref)} inactiveStatusBarStyle={barStyle} inactiveStatusBarBackgroundColor={statusBarColor}/>
-                <DialogAlert ref={ref => DialogAlertHolder.setDialogAlert(ref)}/>
+                <DialogAlert ref={ref => DialogAlertHolder.setDialogAlert(ref)} theme={scheme}/>
                 <ModalPortal/>
             </ThemeProvider>
         );
