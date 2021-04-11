@@ -23,14 +23,19 @@ export default class Empty extends Base {
     };
 
     render() {
+        const containerStyle = helpers('container', this.scheme);
+        const contentStyle = helpers('content', this.scheme);
+        const titleStyle = helpers('title', this.scheme);
+        const textStyle = helpers('text', this.scheme);
+
         const width = (dimens.widthScreen - 45) / 2;
         return (
-            <CBView style={[appStyles.container, helpers('container', this.scheme)]}>
-                <View style={[appStyles.content, helpers('content', this.scheme)]}>
+            <CBView style={[appStyles.container, containerStyle]}>
+                <View style={[appStyles.content, contentStyle]}>
                     <CBAnimator style={{width: '100%'}} enable={true} source={ImageUtil.getImage('bg_not_found')}/>
                     <View style={appStyles.body}>
-                        <Text style={[appStyles.title, helpers('title', this.scheme)]}>{strings('text_opps')}</Text>
-                        <Text style={[appStyles.text, {marginTop: 15}, helpers('text', this.scheme)]}>{strings('text_not_found')}</Text>
+                        <Text style={[appStyles.title, titleStyle]}>{strings('text_opps')}</Text>
+                        <Text style={[appStyles.text, {marginTop: 15}, textStyle]}>{strings('text_not_found')}</Text>
                     </View>
                     <View style={appStyles.footer}>
                         <CBButton buttonStyle={[appStyles.action, {width}]} type={'outline'} title={strings('button_home')} onPress={this.goHome}/>

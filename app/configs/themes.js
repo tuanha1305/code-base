@@ -59,6 +59,9 @@ const lightTheme = {
         borderColor: colors.lineColor,
         borderLeftColor: colors.lineColor
     },
+    menu: {
+        backgroundColor: colors.contentColor
+    },
     icon: colors.primaryTextColor,
     title: {
         color: colors.primaryTextColor
@@ -127,6 +130,9 @@ const darkTheme = {
     border: {
         borderColor: colors.lineDarkColor,
         borderLeftColor: colors.lineDarkColor
+    },
+    menu: {
+        backgroundColor: colors.contentDarkColor
     },
     icon: colors.primaryTextDarkColor,
     title: {

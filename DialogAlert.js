@@ -107,6 +107,7 @@ export default class DialogAlert extends PureComponent {
         const {scheme} = this.props;
         const borderStyle = helpers('border', scheme);
         const textStyle = helpers('text', scheme);
+
         const {buttons, options} = this.state;
         if (options.disabledButtons) return null;
         if (buttons && buttons.length > 1) {
@@ -175,6 +176,7 @@ export default class DialogAlert extends PureComponent {
         const contentStyle = helpers('content', scheme);
         const textStyle = helpers('text', scheme);
         const htmlStyles = helpers('html', scheme);
+
         const {visible, title, message, options} = this.state;
         const {uri, children, html} = options;
         return (

@@ -1,9 +1,17 @@
 {
+  "action_share": "Share",
+  "action_copy": "Copy",
+  "action_open_with_browser": "Open with browser",
+  "action_exit": "Exit",
+
   "button_ok": "Ok",
   "button_cancel": "Cancel",
   "button_close": "Close",
   "button_home": "Home",
   "button_update": "Update",
+  "button_try_again": "Try again",
+
+  "toast_copied": "Copy successful!",
 
   "text_opps": "Opps!",
   "text_not_found": "Sorry we can't find this page. Please try again.",

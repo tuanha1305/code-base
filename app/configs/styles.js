@@ -13,6 +13,16 @@ export const appStyles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.contentColor
     },
+    overlay: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 15
+    },
     body: {
         flex: 1,
         padding: 15
@@ -64,6 +74,10 @@ export const appStyles = StyleSheet.create({
         fontSize: dimens.mediumText,
         color: colors.primaryColor,
         padding: 2
+    },
+    row: {
+        flexDirection: 'row',
+        alignItems: 'center'
     },
     footer: {
         flexDirection: 'row',
