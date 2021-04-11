@@ -2,8 +2,7 @@ import React, {PureComponent} from 'react';
 import {
     Image,
     Keyboard,
-    Text,
-    View
+    Text
 } from 'react-native';
 import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
 import Modal, {
@@ -105,10 +104,11 @@ export default class DialogAlert extends PureComponent {
     };
 
     renderButtons() {
-        const {theme} = this.props;
-        const borderStyle = helpers('border', theme);
-        const textStyle = helpers('text', theme);
-        const {buttons} = this.state;
+        const {scheme} = this.props;
+        const borderStyle = helpers('border', scheme);
+        const textStyle = helpers('text', scheme);
+        const {buttons, options} = this.state;
+        if (options.disabledButtons) return null;
         if (buttons && buttons.length > 1) {
             return (
                 <ModalFooter style={borderStyle}>
@@ -141,7 +141,6 @@ export default class DialogAlert extends PureComponent {
                         onPress={this.onPress(0)}
                         bordered={true}
                     />
-                    <View style={{width: 1}}/>
                 </ModalFooter>
             );
         } else {
@@ -155,7 +154,6 @@ export default class DialogAlert extends PureComponent {
                         onPress={this.onClose}
                         bordered={true}
                     />
-                    <View style={{width: 1}}/>
                 </ModalFooter>
             );
         }
@@ -173,10 +171,10 @@ export default class DialogAlert extends PureComponent {
     };
 
     render() {
-        const {theme} = this.props;
-        const contentStyle = helpers('content', theme);
-        const textStyle = helpers('text', theme);
-        const htmlStyles = helpers('html', theme);
+        const {scheme} = this.props;
+        const contentStyle = helpers('content', scheme);
+        const textStyle = helpers('text', scheme);
+        const htmlStyles = helpers('html', scheme);
         const {visible, title, message, options} = this.state;
         const {uri, children, html} = options;
         return (

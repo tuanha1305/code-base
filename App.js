@@ -27,6 +27,7 @@ import DialogAlert from './DialogAlert';
 import DialogAlertHolder from './DialogAlertHolder';
 
 import Demo from 'screens/Demo';
+import Web from 'screens/Web';
 import Empty from 'screens/Empty';
 
 const errorHandler = (e, isFatal) => {
@@ -182,20 +183,23 @@ export default class App extends Component {
             <ThemeProvider theme={helpers('elements', scheme)}>
                 <StatusBar barStyle={barStyle} backgroundColor={statusBarColor}/>
                 <NavigationContainer ref={this.navigationRef} onReady={this.onReady} onStateChange={this.onStateChange} theme={helpers('navigation', scheme)} initialRouteName={'Demo'}>
-                    <Stack.Navigator mode={'modal'} screenOptions={{
-                        ...TransitionPresets.SlideFromRightIOS,
-                        headerBackTitleVisible: false,
-                        headerTitleAllowFontScaling: false,
-                        headerBackAllowFontScaling: false,
-                        headerTitleAlign: 'center',
-                        headerTintColor: textColor
-                    }}>
+                    <Stack.Navigator
+                        mode={'modal'}
+                        screenOptions={{
+                            ...TransitionPresets.SlideFromRightIOS,
+                            headerBackTitleVisible: false,
+                            headerTitleAllowFontScaling: false,
+                            headerBackAllowFontScaling: false,
+                            headerTitleAlign: 'center',
+                            headerTintColor: textColor
+                        }}>
                         <Stack.Screen name={'Demo'} component={Demo}/>
+                        <Stack.Screen name={'Web'} component={Web} options={{title: strings('screen_web')}}/>
                         <Stack.Screen name={'Empty'} component={Empty} options={{title: strings('screen_empty')}}/>
                     </Stack.Navigator>
                 </NavigationContainer>
                 <DropdownAlert ref={ref => DropdownAlertHolder.setDropdownAlert(ref)} inactiveStatusBarStyle={barStyle} inactiveStatusBarBackgroundColor={statusBarColor}/>
-                <DialogAlert ref={ref => DialogAlertHolder.setDialogAlert(ref)} theme={scheme}/>
+                <DialogAlert ref={ref => DialogAlertHolder.setDialogAlert(ref)} scheme={scheme}/>
                 <ModalPortal/>
             </ThemeProvider>
         );

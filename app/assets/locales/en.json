@@ -1,7 +1,7 @@
 {
   "button_ok": "Ok",
   "button_cancel": "Cancel",
-  "button_close": "Clode",
+  "button_close": "Close",
   "button_home": "Home",
   "button_update": "Update",
 
@@ -9,6 +9,7 @@
   "text_not_found": "Sorry we can't find this page. Please try again.",
 
   "screen_empty": "Code Base",
+  "screen_web": "...",
 
   "title_alert_crash": "Notice",
   "message_alert_crash": "The action can't be completed. Please try again!",
