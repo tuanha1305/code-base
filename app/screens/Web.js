@@ -122,7 +122,7 @@ export default class Web extends Base {
             this.menu.current.hide();
             CBHandler.openUrl(this.url);
         }
-        EventTracker.logEvent('screen_web', {action: 'click_button_open_browser'});
+        EventTracker.logEvent('screen_web', {action: 'click_button_open_with_browser'});
     };
 
     onExit = () => {
