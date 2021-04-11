@@ -191,7 +191,7 @@ export default class App extends Component {
                         headerTintColor: textColor
                     }}>
                         <Stack.Screen name={'Demo'} component={Demo}/>
-                        <Stack.Screen name={'Empty'} component={Empty}/>
+                        <Stack.Screen name={'Empty'} component={Empty} options={{title: strings('screen_empty')}}/>
                     </Stack.Navigator>
                 </NavigationContainer>
                 <DropdownAlert ref={ref => DropdownAlertHolder.setDropdownAlert(ref)} inactiveStatusBarStyle={barStyle} inactiveStatusBarBackgroundColor={statusBarColor}/>
