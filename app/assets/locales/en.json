@@ -9,7 +9,7 @@
   "text_not_found": "Sorry we can't find this page. Please try again.",
 
   "screen_empty": "Code Base",
-  "screen_web": "...",
+  "screen_web": "",
 
   "title_alert_crash": "Notice",
   "message_alert_crash": "The action can't be completed. Please try again!",

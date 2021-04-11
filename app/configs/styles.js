@@ -75,5 +75,11 @@ export const appStyles = StyleSheet.create({
     action: {
         borderRadius: 20,
         borderWidth: 1
+    },
+    button: {
+        width: 40,
+        height: 40,
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 });
