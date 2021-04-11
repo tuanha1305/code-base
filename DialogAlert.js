@@ -2,7 +2,8 @@ import React, {PureComponent} from 'react';
 import {
     Image,
     Keyboard,
-    Text
+    Text,
+    View
 } from 'react-native';
 import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
 import Modal, {
@@ -142,6 +143,7 @@ export default class DialogAlert extends PureComponent {
                         onPress={this.onPress(0)}
                         bordered={true}
                     />
+                    <View style={{height: 1}}/>
                 </ModalFooter>
             );
         } else {
@@ -155,6 +157,7 @@ export default class DialogAlert extends PureComponent {
                         onPress={this.onClose}
                         bordered={true}
                     />
+                    <View style={{height: 1}}/>
                 </ModalFooter>
             );
         }

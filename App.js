@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Appearance, AppState, Linking, LogBox, StatusBar} from 'react-native';
+import {Appearance, AppState, Linking, LogBox, StatusBar, View} from 'react-native';
 import NetInfo from '@react-native-community/netinfo';
 import CBCache from 'caches/CBCache';
 import CBConfig from 'configs/CBConfig';
@@ -9,6 +9,7 @@ import {ThemeProvider} from 'react-native-elements';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {setJSExceptionHandler, setNativeExceptionHandler} from 'react-native-exception-handler';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import analytics from '@react-native-firebase/analytics';
 import dynamicLinks from '@react-native-firebase/dynamic-links';
 import messaging from '@react-native-firebase/messaging';
@@ -17,9 +18,11 @@ import {ModalPortal} from 'react-native-modals';
 import DeviceInfo from 'react-native-device-info';
 import {Settings} from 'react-native-fbsdk-next';
 import OneSignal from 'react-native-onesignal';
+import {appStyles} from 'configs/styles';
 import {helpers} from 'configs/themes';
 import {strings} from 'controls/i18n';
 import colors from 'configs/colors';
+import dimens from 'configs/dimens';
 
 import DropdownAlert from 'react-native-dropdownalert';
 import DropdownAlertHolder from './DropdownAlertHolder';
@@ -174,6 +177,14 @@ export default class App extends Component {
         this.routeNameRef.current = currentRouteName;
     };
 
+    renderHeaderBackImage = (props) => {
+        return (
+            <View style={[appStyles.button, {marginLeft: 5}]}>
+                <Ionicons name={'chevron-back-outline'} color={props.tintColor} size={25}/>
+            </View>
+        );
+    };
+
     render() {
         const scheme = Appearance.getColorScheme();
         const barStyle = scheme === 'dark' ? 'light-content' : 'dark-content';
@@ -187,11 +198,16 @@ export default class App extends Component {
                         mode={'modal'}
                         screenOptions={{
                             ...TransitionPresets.SlideFromRightIOS,
+                            headerBackImage: this.renderHeaderBackImage,
                             headerBackTitleVisible: false,
                             headerTitleAllowFontScaling: false,
                             headerBackAllowFontScaling: false,
                             headerTitleAlign: 'center',
-                            headerTintColor: textColor
+                            headerTintColor: textColor,
+                            headerTitleStyle: {
+                                fontSize: dimens.largeText,
+                                fontWeight: 'normal'
+                            }
                         }}>
                         <Stack.Screen name={'Demo'} component={Demo}/>
                         <Stack.Screen name={'Web'} component={Web} options={{title: strings('screen_web')}}/>
