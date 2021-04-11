@@ -12,5 +12,13 @@
   "title_alert_strength_internet": "Tín hiệu internet yếu",
   "message_alert_strength_internet": "Kết nối internet không ổn định. Vui lòng bật/tắt mạng Wifi/3G/4G và thử lại!",
   "title_alert_open_url": "Thông báo",
-  "message_alert_open_url": "Không mở được liên kết này. Vui lòng thử lại!"
+  "message_alert_open_url": "Không mở được liên kết này. Vui lòng thử lại!",
+  "title_alert_auth": "Thông báo",
+  "message_alert_auth": "Phiên đăng nhập hết hạn. Vui lòng đăng nhập lại!",
+  "title_alert_timeout": "Thông báo",
+  "message_alert_timeout": "Đã hết thời gian xử lý dữ liệu. Vui lòng thử lại!",
+  "title_alert_network_error": "Thông báo",
+  "message_alert_network_error": "Không có kết nối internet. Vui lòng cài đặt mạng Wifi/3G/4G!",
+  "title_alert_request": "Thông báo",
+  "message_alert_request": "Hệ thống đang trong quá trình bảo trì. Vui lòng thử lại!"
 }
