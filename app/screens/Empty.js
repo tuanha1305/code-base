@@ -28,7 +28,7 @@ export default class Empty extends Base {
             <CBView style={[appStyles.container, helpers('container', this.scheme)]}>
                 <View style={[appStyles.content, helpers('content', this.scheme)]}>
                     <CBAnimator style={{width: '100%'}} enable={true} source={ImageUtil.getImage('bg_not_found')}/>
-                    <View style={[appStyles.body, {marginTop: 15}]}>
+                    <View style={appStyles.body}>
                         <Text style={[appStyles.title, helpers('title', this.scheme)]}>{strings('text_opps')}</Text>
                         <Text style={[appStyles.text, {marginTop: 15}, helpers('text', this.scheme)]}>{strings('text_not_found')}</Text>
                     </View>

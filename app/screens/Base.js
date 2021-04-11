@@ -11,20 +11,22 @@ export default class Base extends Component {
     defaultParam = {};
 
     componentDidMount() {
-        this.setNavigation();
-        this.setDefaultParam();
+        const {navigation, route} = this.props;
+        this.focusSubscription = navigation.addListener('focus', this.handleFocusSubscription);
+        this.blurSubscription = navigation.addListener('blur', this.handleBlurSubscription);
+        this.setNavigation(navigation, route);
+        this.setOptions(navigation, route);
+        this.setDefaultParam(route);
     }
 
-    setNavigation() {
-        RootNavigation.setNavigation(this.props.navigation);
-        RootNavigation.setRoute(this.props.route);
-        this.focusSubscription = this.props.navigation.addListener('focus', this.handleFocusSubscription);
-        this.blurSubscription = this.props.navigation.addListener('blur', this.handleBlurSubscription);
+    setNavigation(navigation, route) {
+        RootNavigation.setNavigation(navigation);
+        RootNavigation.setRoute(route);
     }
 
     handleFocusSubscription = () => {
-        RootNavigation.setNavigation(this.props.navigation);
-        RootNavigation.setRoute(this.props.route);
+        const {navigation, route} = this.props;
+        this.setNavigation(navigation, route);
         this.componentFocus();
     };
 
@@ -32,8 +34,12 @@ export default class Base extends Component {
         this.componentBlur();
     };
 
-    setDefaultParam() {
-        const {params} = this.props.route;
+    setOptions(navigation, route) {
+
+    }
+
+    setDefaultParam(route) {
+        const {params} = route;
         if (params && params.defaultParam) {
             this.defaultParam = JsonUtil.parseJsonString(params.defaultParam);
         }

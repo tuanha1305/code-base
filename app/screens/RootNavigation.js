@@ -16,17 +16,11 @@ export default class RootNavigation {
     }
 
     static navigate(...args) {
-        const enable = this.navigation.navigate(...args);
-        if (!enable) {
-            this.navigation.navigate('Empty');
-        }
+        this.navigation.navigate(...args);
     }
 
     static push(...args) {
-        const enable = this.navigation.push(...args);
-        if (!enable) {
-            this.navigation.push('Empty');
-        }
+        this.navigation.push(...args);
     }
 
     static goBack() {
