@@ -28,19 +28,15 @@ export const appStyles = StyleSheet.create({
     },
     subtext: {
         fontSize: dimens.normalText,
-        color: colors.noteTextColor
-    },
-    blockquote: {
-        fontSize: dimens.smallText,
-        color: colors.noteTextColor
+        color: colors.secondaryTextColor
     },
     caption: {
         fontSize: dimens.smallText,
-        color: colors.primaryTextColor
+        color: colors.tertiaryTextColor
     },
     letter: {
         fontSize: dimens.atomText,
-        color: colors.primaryTextColor
+        color: colors.tertiaryTextColor
     },
     error: {
         fontSize: dimens.normalText,

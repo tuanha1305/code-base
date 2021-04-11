@@ -21,12 +21,12 @@ const lightTheme = {
         },
         Button: {
             disabledTitleStyle: {
-                color: colors.white
+                color: colors.tertiaryTextColor
             }
         },
         Image: {
             placeholderStyle: {
-                backgroundColor: colors.white
+                backgroundColor: colors.hideColor
             }
         }
     },
@@ -66,7 +66,7 @@ const darkTheme = {
         ...DarkTheme,
         colors: {
             ...DarkTheme.colors,
-            primary: colors.primaryColor,
+            primary: colors.primaryDarkColor,
             background: colors.contentDarkColor,
             card: colors.contentDarkColor,
             text: colors.primaryTextDarkColor,
@@ -76,16 +76,16 @@ const darkTheme = {
     },
     elements: {
         colors: {
-            primary: colors.primaryColor
+            primary: colors.primaryDarkColor
         },
         Button: {
             disabledTitleStyle: {
-                color: colors.white
+                color: colors.tertiaryTextDarkColor
             }
         },
         Image: {
             placeholderStyle: {
-                backgroundColor: colors.white
+                backgroundColor: colors.hideDarkColor
             }
         }
     },
@@ -101,7 +101,7 @@ const darkTheme = {
         },
         a: {
             fontSize: dimens.mediumText,
-            color: colors.primaryColor,
+            color: colors.primaryDarkColor,
             textDecorationLine: 'underline'
         }
     },
