@@ -3,7 +3,7 @@ import {
     Text,
     View
 } from 'react-native';
-import {CBButton, CBScaleImage, CBView} from 'components';
+import {CBAnimator, CBButton, CBView} from 'components';
 import ImageUtil from 'utils/ImageUtil';
 import {appStyles} from 'configs/styles';
 import {helpers} from 'configs/themes';
@@ -27,8 +27,8 @@ export default class Empty extends Base {
         return (
             <CBView style={[appStyles.container, helpers('container', this.scheme)]}>
                 <View style={[appStyles.content, helpers('content', this.scheme)]}>
-                    <CBScaleImage width={dimens.widthScreen} source={ImageUtil.getImage('bg_not_found')}/>
-                    <View style={appStyles.body}>
+                    <CBAnimator style={{width: '100%'}} enable={true} source={ImageUtil.getImage('bg_not_found')}/>
+                    <View style={[appStyles.body, {marginTop: 15}]}>
                         <Text style={[appStyles.title, helpers('title', this.scheme)]}>{strings('text_opps')}</Text>
                         <Text style={[appStyles.text, {marginTop: 15}, helpers('text', this.scheme)]}>{strings('text_not_found')}</Text>
                     </View>

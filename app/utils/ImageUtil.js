@@ -1,7 +1,7 @@
 export default class ImageUtil {
 
     static images = {
-        bg_not_found: require('assets/images/bg_not_found.png')
+        bg_not_found: require('assets/jsons/404.json')
     };
 
     static getImage(imageUrl) {

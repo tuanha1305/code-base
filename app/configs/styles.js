@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
+import {moderateScale} from 'utils/ThemeUtil';
 import colors from 'configs/colors';
 import dimens from 'configs/dimens';
 
@@ -45,6 +46,10 @@ export const appStyles = StyleSheet.create({
     error: {
         fontSize: dimens.normalText,
         color: colors.errorTextColor
+    },
+    image: {
+        width: moderateScale(240),
+        height: moderateScale(240)
     },
     cover: {
         width: '100%',
