@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Appearance} from 'react-native';
 import DropdownAlertHolder from '../../DropdownAlertHolder';
 import DialogAlertHolder from '../../DialogAlertHolder';
 import RootNavigation from 'screens/RootNavigation';
@@ -6,6 +7,7 @@ import JsonUtil from 'utils/JsonUtil';
 
 export default class Base extends Component {
 
+    scheme = Appearance.getColorScheme();
     defaultParam = {};
 
     componentDidMount() {
