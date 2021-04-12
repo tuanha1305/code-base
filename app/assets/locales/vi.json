@@ -12,6 +12,7 @@
   "button_try_again": "Thử lại",
   "button_skip": "Bỏ qua",
   "button_enable_location": "Cho phép vị trí",
+  "button_next": "Tiếp tục",
 
   "toast_copied": "Sao chép thành công!",
 
@@ -38,5 +39,7 @@
   "title_alert_network_error": "Thông báo",
   "message_alert_network_error": "Không có kết nối internet. Vui lòng cài đặt mạng Wifi/3G/4G!",
   "title_alert_request": "Thông báo",
-  "message_alert_request": "Hệ thống đang trong quá trình bảo trì. Vui lòng thử lại!"
+  "message_alert_request": "Hệ thống đang trong quá trình bảo trì. Vui lòng thử lại!",
+  "title_alert_permissions": "Xin cấp quyền",
+  "message_alert_location_permission": "Cho phép ứng dụng truy cập vị trí của bạn."
 }

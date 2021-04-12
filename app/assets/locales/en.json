@@ -12,6 +12,7 @@
   "button_try_again": "Try again",
   "button_skip": "Skip",
   "button_enable_location": "Enable location",
+  "button_next": "Next",
 
   "toast_copied": "Copy successful!",
 
@@ -38,5 +39,7 @@
   "title_alert_network_error": "Notice",
   "message_alert_network_error": "No internet connection. Please set up your Wifi/3G/4G!",
   "title_alert_request": "Notice",
-  "message_alert_request": "The system is under maintenance. Please try again!"
+  "message_alert_request": "The system is under maintenance. Please try again!",
+  "title_alert_permissions": "Request permission",
+  "message_alert_location_permission": "Allow application to access your location."
 }
