@@ -10,6 +10,8 @@
   "button_home": "Home",
   "button_update": "Update",
   "button_try_again": "Try again",
+  "button_skip": "Skip",
+  "button_enable_location": "Enable location",
 
   "toast_copied": "Copy successful!",
 
