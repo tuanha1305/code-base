@@ -1,5 +1,5 @@
 import {Dimensions, Platform} from 'react-native';
-import {getStatusBarHeight} from 'react-native-iphone-x-helper';
+import {getStatusBarHeight, getBottomSpace} from 'react-native-iphone-x-helper';
 import DeviceInfo from 'react-native-device-info';
 
 const {width, height} = Dimensions.get('window');
@@ -7,6 +7,7 @@ const {width, height} = Dimensions.get('window');
 export default {
     isTablet: DeviceInfo.isTablet(),
     statusBar: getStatusBarHeight(true),
+    bottomSpace: getBottomSpace(),
     appBar: Platform.select({ios: 44, android: 56}),
     widthScreen: width,
     heightScreen: height,

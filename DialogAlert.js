@@ -110,45 +110,32 @@ export default class DialogAlert extends PureComponent {
         const textStyle = helpers('text', scheme);
 
         const {buttons, options} = this.state;
-        if (options.disabledButtons) return null;
-        if (buttons && buttons.length > 1) {
+        if (options.hideButtons) return null;
+        if (buttons && buttons.length > 0) {
             return (
                 <ModalFooter style={borderStyle}>
-                    <ModalButton
+                    {buttons[0] ? <ModalButton
                         key={'negative'}
                         style={borderStyle}
                         text={buttons[0] && buttons[0].text ? buttons[0].text.toUpperCase() : ''}
-                        textStyle={[appStyles.negative, textStyle]}
+                        textStyle={buttons.length > 1 ? [appStyles.negative, textStyle] : appStyles.positive}
                         onPress={this.onPress(0)}
                         bordered={true}
-                    />
-                    <ModalButton
+                    /> : <View style={{height: 1}}/>}
+                    {buttons[1] ? <ModalButton
                         key={'positive'}
                         style={borderStyle}
                         text={buttons[1] && buttons[1].text ? buttons[1].text.toUpperCase() : ''}
                         textStyle={appStyles.positive}
                         onPress={this.onPress(1)}
                         bordered={true}
-                    />
-                </ModalFooter>
-            );
-        } else if (buttons && buttons.length > 0) {
-            return (
-                <ModalFooter style={borderStyle}>
-                    <ModalButton
-                        key={'positive'}
-                        style={borderStyle}
-                        text={buttons[0] && buttons[0].text ? buttons[0].text.toUpperCase() : ''}
-                        textStyle={appStyles.positive}
-                        onPress={this.onPress(0)}
-                        bordered={true}
-                    />
-                    <View style={{height: 1}}/>
+                    /> : <View style={{height: 1}}/>}
                 </ModalFooter>
             );
         } else {
             return (
                 <ModalFooter style={borderStyle}>
+                    <View style={{height: 1}}/>
                     <ModalButton
                         key={'positive'}
                         style={borderStyle}
@@ -157,7 +144,6 @@ export default class DialogAlert extends PureComponent {
                         onPress={this.onClose}
                         bordered={true}
                     />
-                    <View style={{height: 1}}/>
                 </ModalFooter>
             );
         }
