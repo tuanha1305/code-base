@@ -30,32 +30,32 @@ export const appStyles = StyleSheet.create({
     title: {
         fontSize: dimens.largeText,
         color: colors.primaryTextColor,
-        fontWeight: 'bold'
+        fontFamily: 'GoogleSans-Black'
     },
     label: {
         fontSize: dimens.mediumText,
         color: colors.primaryColor,
-        fontWeight: 'bold'
+        fontFamily: 'GoogleSans-Bold'
     },
     text: {
         fontSize: dimens.mediumText,
-        color: colors.primaryTextColor
+        color: colors.primaryTextColor,
+        fontFamily: 'GoogleSans-Regular'
     },
     subtext: {
         fontSize: dimens.normalText,
-        color: colors.secondaryTextColor
+        color: colors.secondaryTextColor,
+        fontFamily: 'GoogleSans-Regular'
     },
     caption: {
         fontSize: dimens.smallText,
-        color: colors.tertiaryTextColor
-    },
-    letter: {
-        fontSize: dimens.atomText,
-        color: colors.tertiaryTextColor
+        color: colors.tertiaryTextColor,
+        fontFamily: 'GoogleSans-Light'
     },
     error: {
         fontSize: dimens.normalText,
-        color: colors.errorTextColor
+        color: colors.errorTextColor,
+        fontFamily: 'GoogleSans-Regular'
     },
     image: {
         width: moderateScale(240),
@@ -68,11 +68,13 @@ export const appStyles = StyleSheet.create({
     negative: {
         fontSize: dimens.mediumText,
         color: colors.primaryTextColor,
+        fontFamily: 'GoogleSans-Regular',
         padding: 2
     },
     positive: {
         fontSize: dimens.mediumText,
         color: colors.primaryColor,
+        fontFamily: 'GoogleSans-Regular',
         padding: 2
     },
     row: {

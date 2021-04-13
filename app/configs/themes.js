@@ -33,16 +33,18 @@ const lightTheme = {
     html: {
         p: {
             fontSize: dimens.mediumText,
-            color: colors.primaryTextColor
+            color: colors.primaryTextColor,
+            fontFamily: 'GoogleSans-Regular'
         },
         b: {
             fontSize: dimens.mediumText,
             color: colors.primaryTextColor,
-            fontWeight: 'bold'
+            fontFamily: 'GoogleSans-Bold'
         },
         a: {
             fontSize: dimens.mediumText,
             color: colors.primaryColor,
+            fontFamily: 'GoogleSans-Regular',
             textDecorationLine: 'underline'
         }
     },
@@ -102,16 +104,19 @@ const darkTheme = {
     html: {
         p: {
             fontSize: dimens.mediumText,
-            color: colors.primaryTextDarkColor
+            color: colors.primaryTextDarkColor,
+            fontFamily: 'GoogleSans-Regular'
         },
         b: {
             fontSize: dimens.mediumText,
             color: colors.primaryTextDarkColor,
+            fontFamily: 'GoogleSans-Bold',
             fontWeight: 'bold'
         },
         a: {
             fontSize: dimens.mediumText,
             color: colors.primaryDarkColor,
+            fontFamily: 'GoogleSans-Regular',
             textDecorationLine: 'underline'
         }
     },

@@ -106,6 +106,18 @@
 		<string>Octicons.ttf</string>
 		<string>Zocial.ttf</string>
 		<string>Fontisto.ttf</string>
+		<string>GoogleSans-Black.ttf</string>
+		<string>GoogleSans-BlackItalic.ttf</string>
+		<string>GoogleSans-Bold.ttf</string>
+		<string>GoogleSans-BoldItalic.ttf</string>
+		<string>GoogleSans-Italic.ttf</string>
+		<string>GoogleSans-Light.ttf</string>
+		<string>GoogleSans-LightItalic.ttf</string>
+		<string>GoogleSans-Medium.ttf</string>
+		<string>GoogleSans-MediumItalic.ttf</string>
+		<string>GoogleSans-Regular.ttf</string>
+		<string>GoogleSans-Thin.ttf</string>
+		<string>GoogleSans-ThinItalic.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

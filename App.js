@@ -206,7 +206,7 @@ export default class App extends Component {
                             headerTintColor: textColor,
                             headerTitleStyle: {
                                 fontSize: dimens.largeText,
-                                fontWeight: 'normal'
+                                fontFamily: 'GoogleSans-Regular'
                             }
                         }}>
                         <Stack.Screen name={'Demo'} component={Demo}/>
