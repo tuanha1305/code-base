@@ -20,9 +20,6 @@ const lightTheme = {
             primary: colors.primaryColor
         },
         Button: {
-            buttonStyle: {
-                borderWidth: 1
-            },
             disabledTitleStyle: {
                 color: colors.tertiaryTextColor
             }
@@ -92,9 +89,6 @@ const darkTheme = {
             primary: colors.primaryDarkColor
         },
         Button: {
-            buttonStyle: {
-                borderWidth: 1
-            },
             disabledTitleStyle: {
                 color: colors.tertiaryTextDarkColor
             }
